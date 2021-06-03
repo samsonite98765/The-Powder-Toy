@@ -191,6 +191,10 @@ simulation_elem_ids = [
 	[ 'VSNS',   189 ],
 	[ 'ROCK',   190 ],
 	[ 'LITH',   191 ],
+	[ 'RAND',   192 ],
+	[ 'RND2',   193 ],
+	[ 'NUGN',   194 ],
+	[ 'TIME',   195 ],
 ]
 
 simulation_elem_src = []
