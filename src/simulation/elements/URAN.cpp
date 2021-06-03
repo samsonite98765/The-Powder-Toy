@@ -31,7 +31,7 @@ void Element::Element_URAN()
 
 	DefaultProperties.temp = R_TEMP + 30.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Uranium. Heavy particles. Generates heat under pressure.";
+	Description = "Uranium. Heavy fissle particles. Generates neutrons under pressure.";
 
 	Properties = TYPE_PART | PROP_RADIOACTIVE;
 
@@ -49,16 +49,11 @@ void Element::Element_URAN()
 
 static int update(UPDATE_FUNC_ARGS)
 {
-	if (!sim->legacy_enable && sim->pv[y/CELL][x/CELL]>0.0f)
+	if (RNG::Ref().chance(1, 100) && RNG::Ref().chance(int(5.0f*sim->pv[y/CELL][x/CELL]), 1000))
 	{
-		if (parts[i].temp == MIN_TEMP)
-		{
-			parts[i].temp += .01f;
-		}
-		else
-		{
-			parts[i].temp = restrict_flt((parts[i].temp*(1 + (sim->pv[y / CELL][x / CELL] / 2000))) + MIN_TEMP, MIN_TEMP, MAX_TEMP);
-		}
+		sim->create_part(i, x, y, PT_NEUT);
 	}
 	return 0;
 }
+
+
