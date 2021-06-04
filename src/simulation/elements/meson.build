@@ -195,6 +195,7 @@ simulation_elem_ids = [
 	[ 'RND2',   193 ],
 	[ 'NUGN',   194 ],
 	[ 'TIME',   195 ],
+	[ 'EXPL',   196 ],
 ]
 
 simulation_elem_src = []
