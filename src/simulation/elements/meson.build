@@ -197,7 +197,7 @@ simulation_elem_ids = [
 	[ 'TIME',   195 ],
 	[ 'EXPL',   196 ],
 	[ 'CLAY',   197 ],
-	[ 'BCLY,,   198 ],
+	[ 'BCLY,   198 ],
 ]
 
 simulation_elem_src = []
