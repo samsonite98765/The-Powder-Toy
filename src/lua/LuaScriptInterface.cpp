@@ -1831,7 +1831,8 @@ int LuaScriptInterface::simulation_getSaveID(lua_State *l)
 	if (tempSave)
 	{
 		lua_pushinteger(l, tempSave->GetID());
-		return 1;
+		lua_pushinteger(l, tempSave->Version);
+		return 2;
 	}
 	return 0;
 }
@@ -1935,7 +1936,7 @@ int LuaScriptInterface::simulation_ambientAirTemp(lua_State * l)
 		return 1;
 	}
 	float ambientAirTemp = luaL_optnumber(l, 1, 295.15f);
-	luacon_sim->air->ambientAirTemp = ambientAirTemp;
+	luacon_model->SetAmbientAirTemperature(ambientAirTemp);
 	return 0;
 }
 
