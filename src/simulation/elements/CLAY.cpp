@@ -7,7 +7,7 @@ void Element::Element_CLAY()
 {
 	Identifier = "DEFAULT_PT_CLAY";
 	Name = "CLAY";
-	Colour = PIXPACK(0xcc6600);
+	Colour = PIXPACK(0x404040);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
@@ -30,9 +30,9 @@ void Element::Element_CLAY()
 	Weight = 100;
 
 	HeatConduct = 150;
-	Description = "clay. Meltable. Shatters under pressure, and refracts photons.";
+	Description = "Glass. Meltable. Shatters under pressure, and refracts photons.";
 
-	Properties = TYPE_SOLID | PROP_HOT_GLOW | PROP_SPARKSETTLE;
+	Properties = TYPE_SOLID | PROP_NEUTPASS | PROP_HOT_GLOW | PROP_SPARKSETTLE;
 
 	LowPressure = IPL;
 	LowPressureTransition = NT;
@@ -54,7 +54,7 @@ static int update(UPDATE_FUNC_ARGS)
 	float diff = parts[i].pavg[1] - parts[i].pavg[0];
 	if (diff > 0.25f || diff < -0.25f)
 	{
-		sim->part_change_type(i,x,y,PT_BCLY);
+		sim->part_change_type(i,x,y,PT_BGLA);
 	}
 	return 0;
 }
