@@ -27,7 +27,7 @@ void Element::Element_BCLY()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Broken Clay, heavy particles formed when glass breaks under pressure. Meltable. Bagels.";
+	Description = "Broken Clay, heavy particles formed when clay breaks under pressure. Meltable. Bagels.";
 
 	Properties = TYPE_PART | PROP_HOT_GLOW;
 
