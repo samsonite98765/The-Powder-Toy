@@ -54,7 +54,7 @@ static int update(UPDATE_FUNC_ARGS)
 	float diff = parts[i].pavg[1] - parts[i].pavg[0];
 	if (diff > 0.25f || diff < -0.25f)
 	{
-		sim->part_change_type(i,x,y,PT_BGLA);
+		sim->part_change_type(i,x,y,PT_BCLY);
 	}
 	return 0;
 }
