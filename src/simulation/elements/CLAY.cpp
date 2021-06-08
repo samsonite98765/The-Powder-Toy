@@ -7,7 +7,7 @@ void Element::Element_CLAY()
 {
 	Identifier = "DEFAULT_PT_CLAY";
 	Name = "CLAY";
-	Colour = PIXPACK(0x404040);
+	Colour = PIXPACK(0xcc9900);
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
