@@ -4,7 +4,7 @@ void Element::Element_BCLY()
 {
 	Identifier = "DEFAULT_PT_BCLY";
 	Name = "BCLY";
-	Colour = PIXPACK(0x606060);
+	Colour = PIXPACK(0xcc9900);
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
